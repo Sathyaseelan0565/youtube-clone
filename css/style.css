@@ -1,0 +1,244 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:focus{
+    outline: none;
+}
+
+body{
+    position: relative;
+    background: #f0f0f0;
+    font-family: 'roboto', sans-serif;
+}
+ 
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 2.5vw;
+}
+
+.toggle-btn{
+   width: 20px;
+   height: 15px;
+   position:relative;
+   cursor: pointer;  
+   /* background-color: red; */
+}
+
+.toggle-btn span {
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    top: 50%;
+    transform:translateY(-50%);
+    background-color: #979797;
+}
+
+.toggle-btn span:nth-child(1) {
+    top: 0;
+}
+
+.toggle-btn span:nth-child(3) {
+    top: 100%;
+}
+
+.logo{
+    height: 90px;
+    margin: 30px;
+}
+
+.search-box{
+    position: relative;
+    max-width:500px;
+    /* background-color: red; */
+    width: 50%;
+    height: 35px;
+    display:flex
+}
+.search-bar {
+    width: 85%;
+    height: 100%;
+    border: 2px solid #dbdbdb;
+    padding: 0 20px;
+    font-size:16px;
+    text-transform: capitalize;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.search-btn{
+    width: 15%;
+    height: 100%;
+    background-color: #f0f0f0;
+    border:2px solid #dbdbdb;
+    padding: 5px 0;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.user-option{
+    height: 35px;
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+}
+
+.user-option .icon{
+    height: 80%;
+    margin-right:20px ;
+    cursor: pointer;
+}
+
+.user-db{
+    width: 38px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.user-db img {
+    height: 30px;
+    padding: 5px;
+}
+
+/* Side bar */
+
+.side-bar{
+    position: fixed;
+    top: 60px;
+    left: 0;
+    min-width: 250px;
+    width: 250px;
+    height: calc(100vh - 60px);
+    background-color: #fff;
+    padding-right:10px ;
+
+}
+
+.links{
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    color: #000;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.links img{
+    height: 25px;
+    margin-right: 20px;
+}
+
+.links:hover,
+.links.active{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.seperator{
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+    margin: 20px;
+}
+
+.filters{
+    position: fixed;
+    left: 250px;
+    top: 60px;
+    width: calc(100% - 250px);
+    height: 60px;
+    background-color: #fff;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.filters::-webkit-scrollbar{
+    display: none;
+}
+
+.filter-options{
+    flex: 0 0 auto;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 1px solid #dbdbdb;
+    text-transform: capitalize;
+    margin-right: 10px;
+    color: #242424;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.filter-options.active{
+    color: #fff;
+    background-color:#242424 ;
+}
+
+/* video-container */
+
+.video-container{
+    width: calc(100% - 250px);
+    margin-top: 120px;
+    margin-left: 250px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-gap: 20px 5px;
+    overflow-x: hidden;
+}
+
+.video {
+    min-height: 250px;
+    height: auto;
+}
+
+.thumbnail{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.content{
+    width: 100%;
+    height: 120px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: red; */
+}
+
+.channel-icon{
+    width: 40px;
+    height: 40px;
+    border: 2px solid #000;
+    border-radius: 50px;
+    object-fit: cover;
+    margin-right: 5px;
+}
+
+.title{
+    width: 100%;
+    overflow: hidden;
+}
+
+.channel-name{
+    font-size: 14px;
+    margin: 2px 0;
+    color: #979797;
+}
